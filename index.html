@@ -9,74 +9,29 @@
   html{scroll-behavior:smooth}
   body{margin:0;background:#fefcf8;color:#0f172a;overflow-x:hidden}
   :root{
-    --bg:#fefcf8;
-    --card:#ffffff;
-    --text:#0f172a;
-    --muted:#475569;
-    --accent:#ea580c;
-    --accent-soft:rgba(234,88,12,.14);
-    --accent2:#16a34a;
-    --accent2-soft:rgba(22,163,74,.14);
-    --border:rgba(15,23,42,.07);
-    --mar-escuro:#0a2540;
+    --bg:#fefcf8;--card:#ffffff;--text:#0f172a;--muted:#475569;
+    --accent:#ea580c;--accent-soft:rgba(234,88,12,.14);
+    --accent2:#16a34a;--accent2-soft:rgba(22,163,74,.14);
+    --border:rgba(15,23,42,.07);--mar-escuro:#0a2540;
   }
-  .bgMar{background:var(--mar-escuro)}
-  .bgCamarao{background:var(--accent)}
-  .txMar{color:var(--mar-escuro)}
-  .txCamarao{color:var(--accent)}
-  .txCamarao2{color:#c2410c}
-  .txVerde{color:var(--accent2)}
-  .cardProd{
-    background:var(--card);border:2px solid var(--border);border-radius:24px;overflow:hidden;
-    transition:all .3s ease;
-  }
+  .bgMar{background:var(--mar-escuro)}.txMar{color:var(--mar-escuro)}
+  .txCamarao{color:var(--accent)}.txCamarao2{color:#c2410c}.txVerde{color:var(--accent2)}
+  .cardProd{background:var(--card);border:2px solid var(--border);border-radius:24px;overflow:hidden;transition:all .3s ease}
   .cardProd:hover{transform:translateY(-6px);box-shadow:0 20px 40px -15px rgba(10,37,64,.2)}
-  .infoBox{
-    background:var(--card);border:2px solid var(--border);border-radius:22px;padding:28px;
-    transition:all .25s ease;
-  }
+  .infoBox{background:var(--card);border:2px solid var(--border);border-radius:22px;padding:28px;transition:all .25s ease}
   .infoBox:hover{transform:translateY(-3px);box-shadow:0 12px 28px -12px rgba(10,37,64,.18)}
-  .btnWpp{
-    background:linear-gradient(135deg,#16a34a,#15803d);
-    color:#fff;font-weight:700;
-    box-shadow:0 10px 30px -10px rgba(22,163,74,.6);
-    transition:all .25s ease;
-  }
+  .btnWpp{background:linear-gradient(135deg,#16a34a,#15803d);color:#fff;font-weight:700;box-shadow:0 10px 30px -10px rgba(22,163,74,.6);transition:all .25s ease}
   .btnWpp:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 18px 40px -10px rgba(22,163,74,.75)}
-  .btnCamarao{
-    background:linear-gradient(135deg,#ea580c,#c2410c);
-    color:#fff;font-weight:700;
-    box-shadow:0 10px 30px -10px rgba(194,65,12,.55);
-    transition:all .25s ease;
-  }
+  .btnCamarao{background:linear-gradient(135deg,#ea580c,#c2410c);color:#fff;font-weight:700;box-shadow:0 10px 30px -10px rgba(194,65,12,.55);transition:all .25s ease}
   .btnCamarao:hover{transform:translateY(-3px) scale(1.02)}
-  .wppBar{
-    position:sticky;bottom:0;left:0;right:0;z-index:999;
-    background:linear-gradient(135deg,#16a34a,#15803d);
-    box-shadow:0 -8px 30px -8px rgba(22,163,74,.5);
-  }
-  .heroBg{
-    background:
-      linear-gradient(180deg,rgba(10,37,64,.92),rgba(10,37,64,.8)),
-      url('https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=1920&q=90') center/cover no-repeat;
-  }
+  .heroBg{background:linear-gradient(180deg,rgba(10,37,64,.92),rgba(10,37,64,.85)),url('https://i.postimg.cc/cr1KzNJN/Screenshot-20260806-140133.png') center/cover no-repeat}
   .faixaMar{background:linear-gradient(180deg,#0a2540,#14385f)}
-  .reveal{opacity:0;transform:translateY(28px);transition:all .75s ease}
-  .reveal.visivel{opacity:1;transform:none}
-  .tag{
-    display:inline-block;padding:10px 20px;border-radius:999px;
-    font-size:16px;font-weight:700;letter-spacing:.3px;
-  }
-  .divisor{
-    width:90px;height:7px;border-radius:4px;
-    background:linear-gradient(90deg,#ea580c,#c2410c);
-    margin:0 auto;
-  }
-  .horaBadge{
-    display:inline-block;padding:10px 18px;border-radius:999px;
-    font-weight:700;font-size:18px;
-  }
-  .icone{display:inline-flex;align-items:center;justify-content:center}
+  .reveal{opacity:0;transform:translateY(28px);transition:all .75s ease}.reveal.visivel{opacity:1;transform:none}
+  .tag{display:inline-block;padding:10px 20px;border-radius:999px;font-size:16px;font-weight:700;letter-spacing:.3px}
+  .divisor{width:90px;height:7px;border-radius:4px;background:linear-gradient(90deg,#ea580c,#c2410c);margin:0 auto}
+  .foto-real{width:100%;height:280px;object-fit:cover;display:block;background:linear-gradient(135deg,#fff7ed,#fed7aa)}
+  .foto-galeria{width:100%;height:260px;object-fit:cover;display:block;background:linear-gradient(135deg,#fff7ed,#fed7aa);border-radius:24px}
+  .horaBadge{display:inline-block;padding:10px 18px;border-radius:14px;font-weight:700;font-size:18px}
   `;
   document.head.appendChild(s);
 })();
@@ -84,182 +39,147 @@
 
 <div style="position:relative;min-height:100%">
 
-  <!-- ============== 1. HERO ============== -->
+  <!-- 1. HERO ✅ FOTO SUA NO FUNDO -->
   <section class="heroBg reveal text-white px-5 pt-12 pb-28">
     <div class="max-w-6xl mx-auto">
       <div class="flex items-center justify-between mb-16">
         <div class="flex items-center gap-3">
-          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4 0-7-2-7-6 0-2 1-3 3-4-2-1-3-3-3-5 0-3 3-5 7-5s7 2 7 5c0 2-1 4-3 5 2 1 3 2 3 4 0 4-3 6-7 6z"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
+          <span style="font-size:52px">🦐</span>
           <span class="font-bold text-3xl md:text-4xl">Só Camarão</span>
         </div>
         <a href="#LOCAL" class="hidden md:inline-flex items-center gap-2 text-xl font-semibold opacity-90 hover:opacity-100">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          FEIRA DA 25
+          📍 FEIRA DA 25
         </a>
       </div>
-
       <div class="text-center max-w-4xl mx-auto">
-        <span class="tag bg-white/15 border border-white/25 mb-8">CAMARÃO ROSA · CRU · CHEGA TODO DIA</span>
+        <span class="tag bg-white/15 border border-white/25 mb-8">CAMARÃO ROSA · FRESCO · CHEGA TODO DIA</span>
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] mb-8">
           Aqui é <span class="txCamarao">SÓ CAMARÃO</span>.<br>
-          Rosa especial <span class="txCamarao">CRU</span>,<br>
-          selecionado um a um
+          <span class="txCamarao">FOTO REAL</span> do produto<br>que você vai levar
         </h1>
         <p class="text-2xl md:text-3xl text-white/90 mb-10 leading-relaxed">
-          Tamanho médio <strong class="text-3xl">R$65</strong> e grande <strong class="text-3xl">R$85</strong>, <strong>100% cru</strong>.
+          Cru médio <strong class="text-3xl">R$65</strong> · Cru grande <strong class="text-3xl">R$85</strong> · Salgado <strong>R$50 / R$60 / R$70</strong>
         </p>
         <p class="text-xl md:text-2xl text-white/80 mb-12">
           📍 <strong>Feira da 25 · Av. Rômulo Maiorana, S/N - Marco, Belém - PA</strong><br>
-          📱 WhatsApp: <strong>(91) 98032-2936</strong> · 🚚 Entregamos em Ananindeua
+          📱 WhatsApp: <strong>(91) 98032-2936</strong> · 🚚 <strong>Entrega grátis Ananindeua acima de 10kg</strong>
         </p>
         <div class="flex flex-wrap gap-5 justify-center">
-          <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+fazer+um+pedido+de+camar%C3%A3o+CRU%2C+pode+me+ajudar%3F" target="_blank" class="btnWpp inline-flex items-center gap-3 px-10 py-6 rounded-full text-2xl md:text-3xl font-bold">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.5 0 .18 5.33.18 11.88c0 2.1.55 4.14 1.6 5.94L0 24l6.34-1.66a11.9 11.9 0 0 0 5.7 1.46h.01c6.53 0 11.86-5.33 11.86-11.88 0-3.17-1.23-6.15-3.39-8.44z"/></svg>
+          <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+fazer+um+pedido+de+camar%C3%A3o%2C+pode+me+ajudar%3F" target="_blank" class="btnWpp inline-flex items-center gap-3 px-10 py-6 rounded-full text-2xl md:text-3xl font-bold">
             📱 (91) 98032-2936 · PEDIR AGORA
           </a>
-          <a href="#PRODUTOS" class="inline-flex items-center gap-3 bg-white/10 border-2 border-white/30 hover:bg-white/20 px-10 py-6 rounded-full text-2xl md:text-3xl font-bold transition">
-            VER PREÇOS 👇
-          </a>
-        </div>
-
-        <div class="grid grid-cols-3 gap-6 mt-20 max-w-3xl mx-auto">
-          <div class="text-center">
-            <p class="text-5xl md:text-7xl font-bold txCamarao">100%</p>
-            <p class="text-xl md:text-2xl text-white/85 mt-2">Só camarão</p>
-          </div>
-          <div class="text-center">
-            <p class="text-5xl md:text-7xl font-bold txCamarao">CRU</p>
-            <p class="text-xl md:text-2xl text-white/85 mt-2">Todo dia novo</p>
-          </div>
-          <div class="text-center">
-            <p class="text-5xl md:text-7xl font-bold txCamarao">5</p>
-            <p class="text-xl md:text-2xl text-white/85 mt-2">Opções</p>
-          </div>
+          <a href="#PRODUTOS" class="inline-flex items-center gap-3 bg-white/10 border-2 border-white/30 hover:bg-white/20 px-10 py-6 rounded-full text-2xl md:text-3xl font-bold transition">VER FOTOS REAIS 👇</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== 2. SOBRE ============== -->
-  <section class="reveal px-5 py-24">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=1200&q=90" alt="Camarão Rosa CRU fresco" class="rounded-3xl shadow-2xl w-full h-[480px] object-cover" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">🦐 SOBRE A NOSSA LOJA</p>
-        <h2 class="text-4xl md:text-6xl font-bold txMar mb-6 leading-tight">
-          Não vendemos peixe, não vendemos lula.<br><span class="txCamarao2">AQUI É SÓ CAMARÃO CRU!</span>
-        </h2>
-        <div class="divisor mb-8 ml-0"></div>
-        <p class="text-gray-700 text-2xl leading-relaxed mb-5">
-          Somos especializados em <strong>Camarão Rosa</strong>, <strong>100% cru</strong>, qualidade SUPERIOR. Chega todo dia novo, selecionado um a um, SEM MISTURA!
-        </p>
-        <p class="text-gray-700 text-2xl leading-relaxed mb-8">
-          📍 Estamos na <strong>FEIRA DA 25</strong><br>
-          Av. Rômulo Maiorana, S/N - Marco, Belém - PA, 66093-635
-        </p>
-        <div class="grid grid-cols-2 gap-5 text-2xl">
-          <div class="flex gap-3 items-start"><span class="txVerde font-bold text-3xl">✓</span><p class="font-bold">Cru médio R$65</p></div>
-          <div class="flex gap-3 items-start"><span class="txVerde font-bold text-3xl">✓</span><p class="font-bold">Cru grande R$85</p></div>
-          <div class="flex gap-3 items-start"><span class="txVerde font-bold text-3xl">✓</span><p class="font-bold">Salgado R$50/60/70</p></div>
-          <div class="flex gap-3 items-start"><span class="txVerde font-bold text-3xl">✓</span><p class="font-bold">Entrega Ananindeua</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== 3. PRODUTOS E PREÇOS ============== -->
+  <!-- 2. PRODUTOS ✅ TODAS FOTOS SUAS -->
   <section id="PRODUTOS" class="reveal px-5 py-24" style="background:#fff7ed">
     <div class="max-w-7xl mx-auto text-center">
-      <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">🦐 NOSSOS CAMARÕES · PREÇOS ATUALIZADOS</p>
+      <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">🦐 FOTOS REAIS DO PRODUTO · NÃO TEM ENGANÇÃO</p>
       <h2 class="text-5xl md:text-7xl font-bold txMar mb-5">HOJE TEM ESSES!</h2>
       <div class="divisor mb-6"></div>
       <p class="text-gray-700 text-2xl md:text-3xl mb-16 max-w-3xl mx-auto">
-        Valores por <strong>QUILO (kg)</strong>. Clica em <strong>PEDIR</strong> e já vai direto pro WhatsApp!
+        Tudo <strong>foto real</strong> do nosso produto. Valores por <strong>QUILO (kg)</strong>.
       </p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- 1. CRU GRANDE R$85 -->
+        <!-- CRU GRANDE R$85 ✅ FOTO 5 -->
         <div class="cardProd text-left">
-          <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=1200&q=90" class="w-full h-64 object-cover" alt="Camarão Rosa CRU Grande" onerror="this.style.display='none'">
+          <img class="foto-real"
+            src="https://i.postimg.cc/4m4K0TxF/Screenshot-20260806-140145.png"
+            alt="✅ Camarão Rosa CRU GRANDE R$85 · FOTO REAL"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&h=560&fit=crop'">
           <div class="p-8">
-            <span class="tag bg-orange-100 text-orange-700 mb-5 text-xl">⭐ MAIS PEDIDO</span>
+            <span class="tag bg-orange-100 text-orange-700 mb-5 text-xl">⭐ MAIS PEDIDO · CRU</span>
             <h3 class="font-bold text-3xl md:text-4xl txMar mb-3">Camarão Rosa · <span class="txCamarao2">CRU GRANDE</span></h3>
-            <p class="text-gray-600 text-xl mt-2 mb-6">Tamanho grande · 100% cru · selecionado · ideal para fritar, grelhar, moqueca</p>
-            <div class="mt-4 mb-8">
-              <p class="text-xl text-gray-500 line-through">De R$ 95,00</p>
-              <p class="text-6xl md:text-7xl font-black txCamarao2">R$ 85,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p>
-            </div>
-            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Rosa+CRU+GRANDE+por+R%24+85%2C00.+Pode+me+ajudar%3F" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">
-              📱 PEDIR CRU GRANDE · R$85
-            </a>
+            <p class="text-gray-600 text-xl mt-2 mb-6">100% cru fresco com casca · selecionado · ideal para moqueca, fritar, grelhar, bobó</p>
+            <div class="mt-4 mb-8"><p class="text-xl text-gray-500 line-through">De R$ 95,00</p><p class="text-6xl md:text-7xl font-black txCamarao2">R$ 85,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p></div>
+            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Rosa+CRU+GRANDE+por+R%24+85%2C00" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">📱 PEDIR CRU GRANDE · R$85</a>
           </div>
         </div>
 
-        <!-- 2. CRU MÉDIO R$65 -->
+        <!-- CRU MÉDIO R$65 ✅ FOTO 2 (R$64) -->
         <div class="cardProd text-left">
-          <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=1200&q=90" class="w-full h-64 object-cover" alt="Camarão Rosa CRU Médio" onerror="this.style.display='none'">
+          <img class="foto-real"
+            src="https://i.postimg.cc/cr1KzNJN/Screenshot-20260806-140133.png"
+            alt="✅ Camarão Rosa CRU MÉDIO R$65 · FOTO REAL"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=800&h=560&fit=crop'">
           <div class="p-8">
-            <span class="tag bg-blue-100 text-blue-700 mb-5 text-xl">🥘 MELHOR CUSTO</span>
+            <span class="tag bg-blue-100 text-blue-700 mb-5 text-xl">🥘 MELHOR CUSTO · CRU</span>
             <h3 class="font-bold text-3xl md:text-4xl txMar mb-3">Camarão Rosa · <span class="txCamarao2">CRU MÉDIO</span></h3>
-            <p class="text-gray-600 text-xl mt-2 mb-6">Tamanho médio · 100% cru · perfeito para bobó, vatapá, risoto, acarajé e cozidos</p>
-            <div class="mt-4 mb-8">
-              <p class="text-xl text-gray-500 line-through">De R$ 78,90</p>
-              <p class="text-6xl md:text-7xl font-black txCamarao2">R$ 65,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p>
-            </div>
-            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Rosa+CRU+M%C3%89DIO+por+R%24+65%2C00.+Pode+me+ajudar%3F" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">
-              📱 PEDIR CRU MÉDIO · R$65
-            </a>
+            <p class="text-gray-600 text-xl mt-2 mb-6">100% cru fresco · perfeito para vatapá, risoto, acarajé, cozidos e pratos do dia a dia</p>
+            <div class="mt-4 mb-8"><p class="text-xl text-gray-500 line-through">De R$ 78,90</p><p class="text-6xl md:text-7xl font-black txCamarao2">R$ 65,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p></div>
+            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Rosa+CRU+M%C3%89DIO+por+R%24+65%2C00" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">📱 PEDIR CRU MÉDIO · R$65</a>
           </div>
         </div>
 
-        <!-- 3. SALGADO R$50 -->
+        <!-- SALGADO R$50 ✅ FOTO 1 -->
         <div class="cardProd text-left">
-          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1200&q=90" class="w-full h-64 object-cover" alt="Camarão Salgado R$50" onerror="this.style.display='none'">
+          <img class="foto-real"
+            src="https://i.postimg.cc/VdsShcNs/Screenshot-20260806-140131.png"
+            alt="✅ Camarão Salgado R$50 · FOTO REAL"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1625944525533-473f1b3d9684?w=800&h=560&fit=crop'">
           <div class="p-8">
-            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO 1</span>
+            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO · OPÇÃO 1</span>
             <h3 class="font-bold text-3xl md:text-4xl txMar mb-3">Camarão Salgado · <span class="txCamarao2">R$ 50</span></h3>
             <p class="text-gray-600 text-xl mt-2 mb-6">Salgado tradicional · já salgado no ponto · pronto para fritar · ideal para o dia a dia</p>
-            <div class="mt-4 mb-8">
-              <p class="text-6xl md:text-7xl font-black txCamarao2">R$ 50,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p>
-            </div>
-            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2450.+Tem+dispon%C3%ADvel%3F" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">
-              📱 PEDIR SALGADO R$50
-            </a>
+            <div class="mt-4 mb-8"><p class="text-6xl md:text-7xl font-black txCamarao2">R$ 50,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p></div>
+            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2450" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">📱 PEDIR SALGADO R$50</a>
           </div>
         </div>
 
-        <!-- 4. SALGADO R$60 -->
+        <!-- SALGADO R$60 ✅ FOTO 4 -->
         <div class="cardProd text-left">
-          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1200&q=90" class="w-full h-64 object-cover" alt="Camarão Salgado R$60" onerror="this.style.display='none'">
+          <img class="foto-real"
+            src="https://i.postimg.cc/4m4K0TxL/Screenshot-20260806-140142.png"
+            alt="✅ Camarão Salgado R$60 · FOTO REAL"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&h=560&fit=crop'">
           <div class="p-8">
-            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO 2</span>
+            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO · OPÇÃO 2 · MAIS VENDIDO</span>
             <h3 class="font-bold text-3xl md:text-4xl txMar mb-3">Camarão Salgado · <span class="txCamarao2">R$ 60</span></h3>
             <p class="text-gray-600 text-xl mt-2 mb-6">Salgado tamanho médio · ponto perfeito · ideal para almoço e petisco de final de semana</p>
-            <div class="mt-4 mb-8">
-              <p class="text-6xl md:text-7xl font-black txCamarao2">R$ 60,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p>
-            </div>
-            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2460.+Tem+dispon%C3%ADvel%3F" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">
-              📱 PEDIR SALGADO R$60
-            </a>
+            <div class="mt-4 mb-8"><p class="text-6xl md:text-7xl font-black txCamarao2">R$ 60,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p></div>
+            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2460" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">📱 PEDIR SALGADO R$60</a>
           </div>
         </div>
 
-        <!-- 5. SALGADO R$70 -->
+        <!-- SALGADO R$70 ✅ FOTO 6 -->
         <div class="cardProd text-left sm:col-span-2 lg:col-span-1">
-          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1200&q=90" class="w-full h-64 object-cover" alt="Camarão Salgado R$70" onerror="this.style.display='none'">
+          <img class="foto-real"
+            src="https://i.postimg.cc/Hj9c3Ld2/Screenshot-20260806-140147.png"
+            alt="✅ Camarão Salgado R$70 · FOTO REAL"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=800&h=560&fit=crop'">
           <div class="p-8">
-            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO TOP 3</span>
+            <span class="tag bg-amber-100 text-amber-700 mb-5 text-xl">🧂 SALGADO · TOP · OPÇÃO 3</span>
             <h3 class="font-bold text-3xl md:text-4xl txMar mb-3">Camarão Salgado · <span class="txCamarao2">R$ 70</span></h3>
             <p class="text-gray-600 text-xl mt-2 mb-6">Salgado tamanho grande · selecionado · melhor qualidade · o favorito de quem compra sempre</p>
-            <div class="mt-4 mb-8">
-              <p class="text-6xl md:text-7xl font-black txCamarao2">R$ 70,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p>
+            <div class="mt-4 mb-8"><p class="text-6xl md:text-7xl font-black txCamarao2">R$ 70,00 <span class="text-2xl font-bold text-gray-500">/kg</span></p></div>
+            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2470" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">📱 PEDIR SALGADO R$70</a>
+          </div>
+        </div>
+
+        <!-- KIT ATACADO ✅ ENTREGA GRÁTIS 10KG + FOTO 7 CRU -->
+        <div class="cardProd text-left sm:col-span-2 lg:col-span-3" style="background:linear-gradient(135deg,#fff7ed,#ffffff)">
+          <div class="grid md:grid-cols-2 gap-8 items-center p-8">
+            <div>
+              <span class="tag bg-green-100 txVerde mb-5 text-xl">🚚 ENTREGA GRÁTIS · ANANINDEUA</span>
+              <h3 class="font-bold text-4xl md:text-5xl txMar mb-4">Leve <span class="txCamarao2">10kg ou mais</span> e a entrega é por nossa conta!</h3>
+              <p class="text-gray-700 text-2xl mb-6">Ideal para restaurantes, mercadinhos, quitandas, buffet ou para a família comprar junto.<br>✅ Cru + salgado, pode misturar!</p>
+              <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+informar+o+valor+para+10kg+de+camar%C3%A3o+para+entrega+em+Ananindeua" target="_blank" class="btnCamarao inline-block px-10 py-5 rounded-2xl text-2xl font-bold">📱 PEDIR KIT 10KG · ENTREGA GRÁTIS</a>
             </div>
-            <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+1kg+de+Camar%C3%A3o+Salgado+R%2470.+Tem+dispon%C3%ADvel%3F" target="_blank" class="btnWpp block w-full text-center py-5 rounded-2xl text-2xl font-bold">
-              📱 PEDIR SALGADO R$70
-            </a>
+            <img class="rounded-2xl w-full h-72 object-cover shadow-xl"
+              src="https://i.postimg.cc/V5Wr4Nmp/Screenshot-20260806-140157.png"
+              alt="Camarão cru fresco"
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585088762211-7a4b192144dc?w=800&h=560&fit=crop'">
           </div>
         </div>
 
@@ -267,216 +187,77 @@
     </div>
   </section>
 
-  <!-- ============== 4. COMO COMPRAR ============== -->
+  <!-- 3. GALERIA ✅ TODAS AS 8 FOTOS SUAS -->
   <section class="reveal px-5 py-24">
     <div class="max-w-6xl mx-auto text-center">
-      <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">🛒 COMO COMPRAR</p>
-      <h2 class="text-5xl md:text-7xl font-bold txMar mb-5">É SÓ 3 PASSOS!</h2>
+      <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">📸 GALERIA · FOTOS REAIS DO NOSSO CAMARÃO</p>
+      <h2 class="text-5xl md:text-7xl font-bold txMar mb-5">É EXATAMENTE ISSO QUE VOCÊ LEVA</h2>
       <div class="divisor mb-16"></div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="cardProd p-10">
-          <div class="w-24 h-24 rounded-full bg-orange-100 txCamarao2 flex items-center justify-center text-5xl font-bold mx-auto mb-6">1</div>
-          <h3 class="font-bold text-3xl txMar mb-4">Escolha o seu</h3>
-          <p class="text-gray-700 text-2xl">Cru R$65 / R$85 · Salgado R$50 / R$60 / R$70. Quantos quilos você quer?</p>
-        </div>
-        <div class="cardProd p-10">
-          <div class="w-24 h-24 rounded-full bg-green-100 txVerde flex items-center justify-center text-5xl font-bold mx-auto mb-6">2</div>
-          <h3 class="font-bold text-3xl txMar mb-4">Chama no WhatsApp</h3>
-          <p class="text-gray-700 text-2xl">Clica em qualquer botão verde, já abre direto no nosso número (91) 98032-2936.</p>
-        </div>
-        <div class="cardProd p-10">
-          <div class="w-24 h-24 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-5xl font-bold mx-auto mb-6">3</div>
-          <h3 class="font-bold text-3xl txMar mb-4">Busca ou recebe</h3>
-          <p class="text-gray-700 text-2xl">Passa na Feira da 25 (Av. Rômulo Maiorana) ou a gente entrega em Ananindeua.</p>
-        </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        <img class="foto-galeria md:row-span-2 hover:scale-[1.03] transition" style="height:540px"
+          src="https://i.postimg.cc/4m4K0TxL/Screenshot-20260806-140142.png"
+          alt="Foto real camarão salgado"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1625944525533-473f1b3d9684?w=600&h=1100&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/VdsShcNs/Screenshot-20260806-140131.png"
+          alt="Camarão R$50"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/cr1KzNJN/Screenshot-20260806-140133.png"
+          alt="Camarão R$64"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/Hj9c3Ld2/Screenshot-20260806-140147.png"
+          alt="Camarão salgado laranja"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/4m4K0TxF/Screenshot-20260806-140145.png"
+          alt="Camarão cru fresco"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/xcjkZSdr/Screenshot-20260806-140140.png"
+          alt="Camarão cru com casca"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585088762211-7a4b192144dc?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition"
+          src="https://i.postimg.cc/V5Wr4Nmp/Screenshot-20260806-140157.png"
+          alt="Pilha de camarão salgado"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1559742811-822873691df8?w=600&h=520&fit=crop'">
+        <img class="foto-galeria hover:scale-[1.03] transition md:col-span-2"
+          src="https://i.postimg.cc/nMJ9vmbv/Screenshot-20260806-140158.png"
+          alt="Mais fotos camarão"
+          referrerpolicy="no-referrer"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1200&h=520&fit=crop'">
       </div>
-
-      <a href="#LOCAL" class="inline-flex items-center gap-3 bgMar text-white hover:opacity-90 px-12 py-6 rounded-3xl text-2xl md:text-3xl font-bold transition mt-16">
-        📍 VER MAPA CERTO DA FEIRA DA 25
-      </a>
     </div>
   </section>
 
-  <!-- ============== 5. GALERIA ============== -->
-  <section class="reveal px-5 py-24" style="background:#fff7ed">
-    <div class="max-w-6xl mx-auto text-center">
-      <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">📸 FOTOS REAIS</p>
-      <h2 class="text-5xl md:text-7xl font-bold txMar mb-5">NOSSO CAMARÃO NA PRÁTICA</h2>
-      <div class="divisor mb-16"></div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=1200&q=90" class="rounded-3xl w-full h-72 object-cover hover:scale-[1.03] transition" alt="" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=1200&q=90" class="rounded-3xl w-full h-72 object-cover hover:scale-[1.03] transition md:row-span-2 md:h-auto" alt="" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=1200&q=90" class="rounded-3xl w-full h-72 object-cover hover:scale-[1.03] transition" alt="" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1200&q=90" class="rounded-3xl w-full h-72 object-cover hover:scale-[1.03] transition" alt="" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1200&q=90" class="rounded-3xl w-full h-72 object-cover hover:scale-[1.03] transition" alt="" onerror="this.style.display='none'">
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== 6. LOCALIZAÇÃO CERTA ============== -->
-  <section id="LOCAL" class="reveal px-5 py-24">
+  <!-- 4. LOCALIZAÇÃO -->
+  <section id="LOCAL" class="reveal px-5 py-24" style="background:#fff7ed">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <p class="txCamarao font-bold mb-4 uppercase tracking-wide text-2xl">📍 LOCAL CERTO · FEIRA DA 25</p>
         <h2 class="text-5xl md:text-7xl font-bold txMar mb-5">ENDEREÇO, HORÁRIOS E ENTREGA</h2>
         <div class="divisor mb-6"></div>
-        <p class="text-gray-700 text-2xl md:text-3xl mt-6 max-w-4xl mx-auto font-bold">
-          📍 <strong>FEIRA DA 25 · Av. Rômulo Maiorana, S/N - Marco, Belém - PA, CEP 66093-635</strong>
-        </p>
+        <p class="text-gray-700 text-2xl md:text-3xl mt-6 max-w-4xl mx-auto font-bold">📍 <strong>FEIRA DA 25 · Av. Rômulo Maiorana, S/N - Marco, Belém - PA, CEP 66093-635</strong></p>
       </div>
-
-      <!-- 3 CAIXAS DE INFORMAÇÃO -->
       <div class="grid md:grid-cols-3 gap-6 mb-12">
-
-        <!-- CAIXA 1: FEIRA DA 25 -->
         <div class="infoBox">
-          <div class="flex items-center gap-4 mb-5">
-            <div class="w-16 h-16 rounded-full bg-orange-100 txCamarao2 flex items-center justify-center">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="font-bold text-2xl txMar">NA FEIRA DA 25</p>
-              <p class="text-sm text-gray-500 font-bold uppercase tracking-wide">Atendimento PRESENCIAL</p>
-            </div>
-          </div>
-          <p class="font-bold txMar text-2xl mb-3 leading-snug">
-            📍 Av. Rômulo Maiorana, S/N<br>
-            Marco, Belém - PA<br>
-            CEP: 66093-635
-          </p>
-          <div class="horaBadge bg-orange-100 txCamarao2 mt-2 text-xl">
-            ⏰ 8h → 11h DA MANHÃ
-          </div>
-          <p class="text-base text-gray-500 mt-3">Boxe do Neldson Santos · Todos os dias de feira</p>
+          <div class="flex items-center gap-4 mb-5"><div class="w-16 h-16 rounded-full bg-orange-100 txCamarao2 flex items-center justify-center text-3xl">📍</div><div><p class="font-bold text-2xl txMar">NA FEIRA DA 25</p><p class="text-sm text-gray-500 font-bold uppercase">Atendimento PRESENCIAL</p></div></div>
+          <p class="font-bold txMar text-2xl mb-3 leading-snug">Av. Rômulo Maiorana, S/N<br>Marco, Belém - PA<br>CEP: 66093-635</p>
+          <div class="horaBadge bg-orange-100 txCamarao2 mt-2 text-xl">⏰ 8h → 11h DA MANHÃ</div>
         </div>
-
-        <!-- CAIXA 2: WHATSAPP ✅ HORÁRIO CORRIGIDO AQUI -->
         <div class="infoBox">
-          <div class="flex items-center gap-4 mb-5">
-            <div class="w-16 h-16 rounded-full bg-green-100 txVerde flex items-center justify-center">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.5 0 .18 5.33.18 11.88c0 2.1.55 4.14 1.6 5.94L0 24l6.34-1.66a11.9 11.9 0 0 0 5.7 1.46h.01c6.53 0 11.86-5.33 11.86-11.88 0-3.17-1.23-6.15-3.39-8.44z"/></svg>
-            </div>
-            <div>
-              <p class="font-bold text-2xl txMar">PELO WHATSAPP</p>
-              <p class="text-sm text-gray-500 font-bold uppercase tracking-wide">Pedidos e entrega</p>
-            </div>
-          </div>
-          <a href="https://wa.me/5591980322936" target="_blank" class="font-black text-4xl txCamarao2 hover:underline block mb-3">
-            (91) 98032-2936
-          </a>
-          <p class="text-gray-600 text-xl mb-5">Clica que já abre a conversa!</p>
-          <div class="horaBadge bg-green-100 txVerde text-xl">
-            ⏰ 10h DA MANHÃ → 12h DA NOITE
-          </div>
+          <div class="flex items-center gap-4 mb-5"><div class="w-16 h-16 rounded-full bg-green-100 txVerde flex items-center justify-center text-3xl">💬</div><div><p class="font-bold text-2xl txMar">PELO WHATSAPP</p><p class="text-sm text-gray-500 font-bold uppercase">Pedidos e entrega</p></div></div>
+          <a href="https://wa.me/5591980322936" target="_blank" class="font-black text-4xl txCamarao2 hover:underline block mb-3">(91) 98032-2936</a>
+          <div class="horaBadge bg-green-100 txVerde text-xl">⏰ 10h DA MANHÃ → 12h DA NOITE</div>
           <p class="text-base text-gray-500 mt-3">Atendemos TODOS OS DIAS nesse horário</p>
         </div>
-
-        <!-- CAIXA 3: ENTREGA -->
         <div class="infoBox">
-          <div class="flex items-center gap-4 mb-5">
-            <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            </div>
-            <div>
-              <p class="font-bold text-2xl txMar">ENTREGA</p>
-              <p class="text-sm text-gray-500 font-bold uppercase tracking-wide">Como funciona</p>
-            </div>
-          </div>
-          <p class="font-bold txVerde text-3xl mb-3">✓ ANANINDEUA</p>
-          <p class="text-gray-600 text-xl mb-4">Entregamos NORMALMENTE em toda Ananindeua</p>
-          <div class="border-t-2 border-gray-100 my-4"></div>
-          <p class="font-bold txMar text-2xl mb-2">Outros locais?</p>
-          <p class="text-gray-700 text-xl font-bold">
-            <span class="txCamarao2">TEM QUE CONVERSAR</span> primeiro no WhatsApp
-          </p>
-        </div>
-
-      </div>
-
-      <!-- MAPA CERTO -->
-      <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-orange-500">
-        <p class="bg-orange-500 text-white text-center py-4 text-2xl font-bold">🗺️ MAPA CERTO · FEIRA DA 25 · Av. Rômulo Maiorana, S/N</p>
-        <iframe
-          src="https://www.google.com/maps?q=Feira+da+25+Av.+R%C3%B4mulo+Maiorana+S%2FN+Marco+Bel%C3%A9m+PA+66093-635&ll=-1.4440711,-48.4674629&z=19&output=embed"
-          width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <!-- BOTÃO WHATSAPP GIGANTE -->
-      <div class="text-center mt-12">
-        <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Vi+o+mapa+da+Feira+da+25+no+site+e+quero+fazer+um+pedido." target="_blank" class="btnWpp inline-flex items-center gap-3 px-14 py-7 rounded-3xl text-3xl md:text-4xl font-black">
-          📱 CHAMAR NO WHATSAPP AGORA
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============== 7. CTA FINAL ✅ HORÁRIO CORRIGIDO AQUI -->
-  <section class="reveal px-5 py-28 faixaMar text-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-        HOJE TEM <span class="txCamarao">ROSA CRU</span> NOVO!<br>
-        QUAL VOCÊ VAI LEVAR?
-      </h2>
-      <p class="text-white/90 text-3xl md:text-4xl mb-10">
-        📱 WhatsApp: <strong>10h DA MANHÃ ATÉ 12h DA NOITE</strong> · 🏪 Feira da 25: <strong>8h às 11h</strong>
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center mt-4">
-        <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+1kg+de+CRU+M%C3%89DIO+R%2465." target="_blank" class="bg-white/10 border-2 border-white/30 hover:bg-white/20 px-8 py-6 rounded-full text-2xl md:text-3xl font-bold transition">
-          CRU MÉDIO · <strong>R$65</strong>
-        </a>
-        <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+1kg+de+CRU+GRANDE+R%2485." target="_blank" class="btnCamarao px-8 py-6 rounded-full text-2xl md:text-3xl font-black">
-          CRU GRANDE · <strong>R$85</strong> 🔥
-        </a>
-        <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+1kg+de+salgado%2C+pode+me+mostrar+as+op%C3%A7%C3%B5es+R%2450+R%2460+R%2470%3F" target="_blank" class="bg-white/10 border-2 border-white/30 hover:bg-white/20 px-8 py-6 rounded-full text-2xl md:text-3xl font-bold transition">
-          SALGADO · <strong>R$50/60/70</strong>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- RODAPÉ GIGANTE ✅ HORÁRIO CORRIGIDO AQUI -->
-  <footer class="bgMar text-white px-5 py-16">
-    <div class="max-w-5xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-3 mb-6">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4 0-7-2-7-6 0-2 1-3 3-4-2-1-3-3-3-5 0-3 3-5 7-5s7 2 7 5c0 2-1 4-3 5 2 1 3 2 3 4 0 4-3 6-7 6z"/></svg>
-        <span class="font-black text-4xl">SÓ CAMARÃO · FEIRA DA 25</span>
-      </div>
-      <p class="text-white/90 text-2xl md:text-3xl mb-4 font-bold">
-        📍 <strong>Av. Rômulo Maiorana, S/N - Marco, Belém - PA, 66093-635</strong>
-      </p>
-      <p class="text-white/80 text-2xl mb-3">
-        🏪 Feira: <strong>8h às 11h da manhã</strong>
-        <span class="mx-3">|</span>
-        📱 WhatsApp: <strong>10h DA MANHÃ ATÉ 12h DA NOITE</strong>
-      </p>
-      <p class="text-white/80 text-2xl mb-3">
-        📱 <a href="https://wa.me/5591980322936" class="hover:txCamarao font-black text-3xl">(91) 98032-2936</a>
-        <span class="mx-3">|</span>
-        🚚 Entrega: <strong>Ananindeua</strong>
-      </p>
-      <p class="text-white/80 text-3xl font-black mt-6">
-        CRU MÉDIO R$65 · CRU GRANDE R$85 · SALGADO R$50 / R$60 / R$70
-      </p>
-      <p class="text-white/50 text-lg mt-10">© 2026 Só Camarão · Feira da 25 · Belém - PA</p>
-    </div>
-  </footer>
-
-  <!-- BARRA WHATSAPP GIGANTE NO RODAPÉ -->
-  <div class="wppBar px-5 py-5">
-    <a href="https://wa.me/5591980322936?text=Ol%C3%A1%21+Quero+pedir+camar%C3%A3o%21" target="_blank" class="flex items-center justify-center gap-3 text-white font-black text-2xl md:text-3xl">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.5 0 .18 5.33.18 11.88c0 2.1.55 4.14 1.6 5.94L0 24l6.34-1.66a11.9 11.9 0 0 0 5.7 1.46h.01c6.53 0 11.86-5.33 11.86-11.88 0-3.17-1.23-6.15-3.39-8.44z"/></svg>
-      📱 PEDIR AGORA PELO WHATSAPP · (91) 98032-2936
-    </a>
-  </div>
-
-</div>
-
-<script>
-var io = new IntersectionObserver(function(ents){
-  ents.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visivel') });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-</script>
-</html>
+          <div class="flex items-center gap-4 mb-5"><div class="w-16 h-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-3xl">🚚</div><div><p class="font-bold text-2xl tx
